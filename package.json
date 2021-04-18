@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": ***REMOVED***},
+  "scripts": ***REMOVED***
+    "start": "netlify dev"
+  },
   "author": "Paulo Madeira",
   "license": "ISC",
   "dependencies": ***REMOVED***
