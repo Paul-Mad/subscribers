@@ -8,12 +8,12 @@ const app = express();
 
 const router = express.Router();
 
-app.use(bodyParser.urlencoded(***REMOVED*** extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors());
 
-router.get("/subscribers", (req, res) => ***REMOVED***
+router.get("/subscribers", (req, res) => {
   //get collection from database
 
   const data = getData();
@@ -22,13 +22,13 @@ router.get("/subscribers", (req, res) => ***REMOVED***
 });
 
 //POST request
-router.post("/subscribers/post", (req, res) => ***REMOVED***
-  if (req.body) ***REMOVED***
+router.post("/subscribers", (req, res) => {
+  if (req.body) {
     setData(req.body);
 
-    res.status(200).json(***REMOVED*** message: "Cadastro realizado com sucesso!" });
-  } else ***REMOVED***
-    res.status(400).json(***REMOVED***
+    res.status(200).json({ message: "Cadastro realizado com sucesso!" });
+  } else {
+    res.status(400).json({
       message: "Missing body data from request",
     });
   }
